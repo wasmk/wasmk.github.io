@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>What is Wasm/k? | Wasm/k</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="What is Wasm/k?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="WebAssembly, extended with support for first-class continuations." />
+<meta property="og:description" content="WebAssembly, extended with support for first-class continuations." />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="Wasm/k" />
+<script type="application/ld+json">
+{"description":"WebAssembly, extended with support for first-class continuations.","headline":"What is Wasm/k?","name":"Wasm/k","@type":"WebSite","url":"/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0c27add53eb39c67c032df7375fd529f6df24707">
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Wasm/k</h1>
+      <h2 class="project-tagline">WebAssembly, extended with support for first-class continuations.</h2>
+      <div>
+        <a href="main.pdf" class="btn" style="vertical-align: middle">Read Paper + Appendix</a>
+        <a href="https://github.com/donald-pinckney/WasmContinuations" class="btn" style="vertical-align: middle">Install Wasmtime Fork + C/k<br/>(Not anonymized)</a>
+      </div>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h2 id="what-is-wasmk">What is Wasm/k?</h2>
+
+<p><strong>Wasm/k</strong> (WebAssembly continuations) is an extension of WebAssembly with additional primitive instructions that offer
+support for full first-class continuations, very similar to <code class="language-plaintext highlighter-rouge">call/cc</code> in Scheme / Racket. These instructions allow
+for significantly more efficient implementations of high-level language features such as green threads.
+<strong>Wasm/k</strong> consists of three parts:</p>
+
+<ol>
+  <li>A fork of <strong>wasmtime</strong> (a JIT implementation of WebAssembly) which implements the additional instructions of <strong>Wasm/k</strong>.</li>
+  <li><strong>C/k</strong>, a wrapper around <a href="https://emscripten.org">Emscripten</a> which exposes first-class continuations to C, and compiles them to <strong>Wasm/k</strong>.</li>
+  <li>Our paper, which includes the full formal definition of <strong>Wasm/k</strong> and proofs of safety.</li>
+</ol>
+
+<h2 id="wasmtime">Wasmtime</h2>
+<p>TODO</p>
+
+<h2 id="emcck">emcc/k</h2>
+<p>TODO</p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/wasmk/wasmk.github.io">wasmk.github.io</a> is maintained by <a href="https://github.com/wasmk">wasmk</a>.</span>
+        
+      </footer>
+    </main>
+  </body>
+</html>
