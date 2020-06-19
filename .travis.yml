@@ -1,0 +1,26 @@
+language: ruby
+rvm:
+  - 2.6.3
+
+sudo: false
+branches:
+  only:
+    - src
+
+cache:
+  bundler: true
+
+
+
+install:
+  - gem install jekyll
+  - gem install github-pages
+  - gem install jekyll-sitemap
+  - gem install jekyll-seo-tag
+
+script: ./buildToMaster
+env:
+  global:
+    - ENCRYPTION_LABEL: "0ddd2445e49f"
+    - COMMIT_AUTHOR_EMAIL: "donald_pinckney@icloud.com"
+
