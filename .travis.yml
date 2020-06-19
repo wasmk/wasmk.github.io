@@ -11,13 +11,6 @@ cache:
   bundler: true
 
 
-
-install:
-  - gem install jekyll
-  - gem install github-pages
-  - gem install jekyll-sitemap
-  - gem install jekyll-seo-tag
-
 script: ./buildToMaster
 env:
   global:
