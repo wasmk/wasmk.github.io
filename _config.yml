@@ -33,7 +33,7 @@ plugins:
   - jekyll-feed
   - github-pages
 
-paper_url: "main.pdf"
+paper_url: "FullVersion.pdf"
 wasmtime_fork_url: "https://github.com/donald-pinckney/WasmContinuations"
 
 # Exclude from processing.
