@@ -22,14 +22,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=323c97b3960a576476343556828daa91949d2b69">
+    <link rel="stylesheet" href="/assets/css/style.css?v=bcd4c191dfc2a3f21c119d2c80f1b4e934a36fa7">
   </head>
   <body>
     <header class="page-header" role="banner">
       <h1 class="project-name">Wasm/k</h1>
       <h2 class="project-tagline">WebAssembly, extended with support for first-class continuations.</h2>
       <div>
-        <a href="main.pdf" class="btn" style="vertical-align: middle">Read Paper + Appendix</a>
+        <a href="FullVersion.pdf" class="btn" style="vertical-align: middle">Read Paper + Appendix</a>
         <a href="https://github.com/donald-pinckney/WasmContinuations" class="btn" style="vertical-align: middle">View Code on GitHub<br/>(Not anonymized)</a>
       </div>
     </header>
@@ -43,16 +43,23 @@ for significantly more efficient implementations of high-level language features
 <strong>Wasm/k</strong> consists of three parts:</p>
 
 <ol>
-  <li>A fork of <strong>wasmtime</strong> (a JIT implementation of WebAssembly) which implements the additional instructions of <strong>Wasm/k</strong>.</li>
+  <li>A fork of <strong>Wasmtime</strong>, a JIT implementation of WebAssembly, which implements the additional instructions of <strong>Wasm/k</strong>.</li>
   <li><strong>C/k</strong>, a wrapper around <a href="https://emscripten.org">Emscripten</a> which exposes first-class continuations to C, and compiles them to <strong>Wasm/k</strong>.</li>
-  <li>Our paper, which includes the full formal definition of <strong>Wasm/k</strong> and proofs of safety.</li>
+  <li><a href="/FullVersion.pdf">Our paper</a>, which includes the full formal definition of <strong>Wasm/k</strong> and proofs of safety.</li>
 </ol>
 
 <h2 id="wasmtime">Wasmtime</h2>
-<p>TODO</p>
 
-<h2 id="emcck">emcc/k</h2>
-<p>TODO</p>
+<p>Wasmtime is a JIT for WebAssembly implemented in Rust. We extended Wasmtime in a fork to support Wasm/k.
+Building our fork of Wasmtime also depends on our forks of a few other Rust WebAssembly toolchain libraries.
+Please see the <a href="https://github.com/donald-pinckney/WasmContinuations">instructions for building our fork of Wasmtime</a>.</p>
+
+<h2 id="ck">C/k</h2>
+
+<p>C/k can be used to compile C/C++ which uses first class continuations
+to Wasm/k code, which can then be run in the modified Wasmtime JIT.
+C/k is implemented as a set of wrapper scripts around Emscripten / WASI-SDK.
+Please see the <a href="https://github.com/plasma-umass/emcc_control/">instructions for installing C/k</a>.</p>
 
 
       <footer class="site-footer">
