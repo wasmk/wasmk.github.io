@@ -36,6 +36,10 @@ plugins:
 paper_url: "FullVersion.pdf"
 wasmtime_fork_url: "https://github.com/donald-pinckney/WasmContinuations"
 
+github:
+  owner_name: "Donald Pinckney"
+  owner_url: "https://donaldpinckney.com"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
